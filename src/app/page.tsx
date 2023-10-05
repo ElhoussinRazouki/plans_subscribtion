@@ -46,7 +46,7 @@ const plans = {
 
 export default function Home() {
   const Subscribe = (plane : any) => {
-    fetch("http://localhost:3002/api/payment", {
+    fetch(`${process.env.PAYMENT_API}/payment`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
